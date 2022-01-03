@@ -1,0 +1,1362 @@
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+
+<head>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="apple-mobile-web-app-title" content="이천시동행누리센터" />
+  <title>이천시동행누리센터</title>
+  <meta name="title" content="이천시동행누리센터" />
+  <meta name="keywords" content="수목원,식물원,소풍,데이트,효도,관광,여행,정원,조경,가든,파주,나들이,피크닉,모임,산책" />
+  <meta name="description" content="동서양의 아름다운 정원을 모두 품은 곳, 이천시동행누리센터으로 여러분을 초대합니다. 가족, 연인들과 함께 한 폭의 그림과 같은 동양식 그리고 유럽식 정원을 관람하며 자연의 아름다움을 흠뻑 느끼는 곳입니다. 이천시동행누리센터은 경기도 파주시에 위치하고 있습니다." />
+  <meta property="og:title" content="이천시동행누리센터">
+  <meta property="og:url" content="https://www.bcj.co.kr/">
+  <meta property="og:image" content="../../images/bcj-og.jpg">
+  <meta property="og:description" content="동서양의 아름다운 정원을 품은 이천시동행누리센터으로 여러분을 초대합니다." />
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="이천시동행누리센터">
+  <meta name="twitter:url" content="https://www.bcj.co.kr/">
+  <meta name="twitter:image" content="../../images/bcj-twitter.jpg">
+  <meta name="twitter:description" content="동서양의 아름다운 정원을 품은 이천시동행누리센터으로 여러분을 초대합니다." />
+  <link rel="stylesheet" href="../../dist/css/module/line-awesome.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../dist/css/module/slick-theme.css" />
+  <link rel="stylesheet" href="../../dist/css/module/slick.css" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" type="text/css" href="/dist/css/comm.css?ver=2019120901">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="../../dist/js/module/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="../../dist/js/module/slick.min.js"></script>
+  <script src="../../dist/js/module/jquery.scrollUp.min.js"></script>                       <!-- scroll top -->
+  <script src="../../dist/js/module/include.js" charset="utf-8"></script>
+  <script src="../../dist/js/comm.js"></script>
+  <script src="/dist/js/util.js?version=2019120601" charset="utf-8"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <!--[if lt IE 9]>
+  	<script src="../../dist/js/module/html5.js"></script>
+  	<script src="../../dist/js/module/respond.min.js"></script>
+  <![endif]-->
+  <!-- <script>
+    $('body').scrollspy({target: ".gnb"})
+  </script> -->
+<script type="text/javascript">
+	$(document).ready(
+		function() {
+			$("#agree").click(function(){
+				if( document.getElementById('check1').checked &&
+					document.getElementById('check2').checked &&
+					document.getElementById('check3').checked &&
+					document.getElementById('check4').checked) {
+
+				}else {
+					alert("회원가입약관과 개인정보 수집 및 이용, 서약서, 민감정보에 대한 안내를 모두 동의해 주세요.");
+					return false;
+				}
+
+				//location.href="";
+				//location.replace("../member/joinCheck.do");
+				location.replace("../member/regForm.do?mnr=regForm");
+				//location.href="../member/regForm.do?mnr=regForm;"
+			});
+
+			// 첫 화면 포커스
+			setTimeout(function(){
+				$("#check1").focus();
+			}, 0);
+	});
+
+	function allChk(obj){
+		var chk1 = document.getElementById('check1');
+		var chk2 = document.getElementById('check2');
+		var chk3 = document.getElementById('check3');
+		var chk4 = document.getElementById('check4');
+		var chkall=document.getElementById('checkAll');
+
+		if(!chkall.checked){
+			chk1.checked=false;
+			chk2.checked=false;
+			chk3.checked=false;
+			chk4.checked=false;
+		}else{
+			chk1.checked=true;
+			chk2.checked=true;
+			chk3.checked=true;
+			chk4.checked=true;
+		}
+
+
+	}
+	function chk1(){
+		if(!document.getElementById('check1').checked){
+			if(document.getElementById('checkAll').checked){
+				document.getElementById('checkAll').checked=false;
+			}
+		}else {
+			chAllState();
+		}
+	}
+	function chk2(){
+		if(!document.getElementById('check2').checked){
+			if(document.getElementById('checkAll').checked){
+				document.getElementById('checkAll').checked=false;
+			}
+		}else {
+			chAllState();
+		}
+	}
+	function chk3(){
+		if(!document.getElementById('check3').checked){
+			if(document.getElementById('checkAll').checked){
+				document.getElementById('checkAll').checked=false;
+			}
+		}else {
+			chAllState();
+		}
+	}
+	function chk4(){
+		if(!document.getElementById('check4').checked){
+			if(document.getElementById('checkAll').checked){
+				document.getElementById('checkAll').checked=false;
+			}
+		} else {
+			chAllState();
+		}
+	}
+	function chAllState(){
+		if( document.getElementById('check1').checked &&
+				document.getElementById('check2').checked &&
+				document.getElementById('check3').checked &&
+				document.getElementById('check4').checked) {
+			document.getElementById('checkAll').checked=true;
+			}
+	}
+</script>
+
+</head>
+
+<body>
+  <div class="wrap">
+	<!-- Header include -->
+	<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+	if(document.location.protocol == 'http:'){
+		document.location.href=document.location.href.replace('http:','https:');
+	}
+
+	$(document).ready(function() {
+
+
+
+
+	});
+
+	function goLogin() {
+		location.href="../member/login.do?mnr=login";
+	}
+</script>
+
+<div id="skipnavigation">
+  <a href="#gnb"><span>메뉴 바로가기</span></a>
+  <a href="#main"><span>본문 바로가기</span></a>
+  <a href="#login"><span>로그인 바로가기</span></a>
+</div>
+<header data-spy="affix" data-offset-top="50">
+  <div class="gnb_mini">
+    <div class="container_w clear_g">
+      <ul class="col_left">
+        <li>전체 방문자수 : <span class="num">136,309</span></li>
+        <li>오늘 방문자수 : <span class="num">129</span></li>
+      </ul>
+      <ul class="col_right">
+        <li><a href="/main/main.do?mnr=main">홈</a></li>
+        <li><a href="/member/join.do?mnr=join">회원가입</a></li>
+        <li><a href="/s6/s601.do?mnr=s601">사이트맵</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="gnb" class="gnb">
+    <div class="container_w">
+      <!-- <h1 class="logo"><a href="/main/main.jsp">이천시동행누리센터</a></h1>  -->
+      <h1 class="logo"><a href="/main/main.do?mnr=main">이천시동행누리센터</a></h1>
+      <nav class="navbar navbar-expand-md">
+        <div class="nav_bg"></div>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <h2 class="blind">전체메뉴</h2>
+          <ul class="navbar-nav nav_depth1">
+            <li>
+              <a href="/s1/s101.do?mnr=s101"><span>센터소개</span></a>
+              <ul class="nav_depth2">
+                <li><a href="/s1/s101.do?mnr=s101">센터소개</a></li>
+                <li><a href="/s1/s102.do?mnr=s102">연혁 및 조직도</a></li>
+                <li><a href="/s1/s103.do?mnr=s103">관련사이트</a></li>
+                <li><a href="/s1/s104.do?mnr=s104">찾아오시는 길</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="/s2/s201.do?mnr=s201"><span>이용안내</span></a>
+              <ul class="nav_depth2">
+                <li><a href="/s2/s201.do?mnr=s201">이용안내</a></li>
+                <li><a href="/s2/s202.do?mnr=s202">차량보유현황</a></li>
+                <li><a href="/s2/s203.do?mnr=s203">인터넷접수이용안내</a></li>
+                <li><a href="/s2/s204.do?mnr=s204">고객앱이용안내</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="/booking/bookingDo.do?mnr=bookingDo"><span>인터넷 접수</span></a>
+              <ul class="nav_depth2">
+                <li><a href="/booking/bookingDo.do?mnr=bookingDo">접&nbsp;&nbsp;&nbsp;수</a></li>
+                <li><a href="/booking/bookingState.do?mnr=bookingState">접수현황/취소</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="/board/noticeList.do?mnr=boardList&type=notice"><span>열린광장</span></a>
+              <ul class="nav_depth2">
+                <li><a href="/board/noticeList.do?mnr=boardList&type=notice">공지사항</a></li>
+                <li><a href="/board/qnaList.do?mnr=boardList&type=qna">묻고답하기</a></li>
+                <li><a href="/board/lossList.do?mnr=boardList&type=loss">분&nbsp;실&nbsp;물</a></li>
+                <li><a href="/board/pressList.do?mnr=boardList&type=press">보도자료</a></li>
+                <li><a href="/board/goodList.do?mnr=boardList&type=good">친절 및 불친절 신고</a></li>
+                <li><a href="/board/popupList.do?mnr=boardList&type=popup">팝&nbsp;업&nbsp;존</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="/member/login.do?mnr=login"><span>회원서비스</span></a>
+              <ul class="nav_depth2">
+                <li><a href="/member/login.do?mnr=login">로&nbsp;그&nbsp;인</a></li>
+                <li><a href="/member/findidpw.do?mnr=findidpw">아이디/비밀번호 찾기</a></li>
+                <li><a href="/member/changepw.do?mnr=changepw">비밀번호 변경</a></li>
+                <li><a href="/member/join.do?mnr=join">회원가입</a></li>
+                <li><a href="/member/memView.do?mnr=memView">회원정보수정</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<hr>
+
+	<!-- //Header include -->
+
+    <main id="subContents">
+      <div class="container_w">
+        <div class="sec_nav">
+          <h2>회원서비스</h2>
+          <div class="wrap_lnb">
+            <nav class="lnb">
+              <ul>
+                <li>
+                  <a href="/member/login.do?mnr=login">로그인</a>
+                </li>
+                <li>
+                  <a href="/member/findidpw.do?mnr=findidpw">아이디/비밀번호 찾기</a>
+                </li>
+                <li>
+                  <a href="/member/changepw.do?mnr=changepw">비밀번호 변경</a>
+                </li>
+                <li class="on">
+                  <a href="/member/join.do?mnr=join">회원가입</a>
+                </li>
+                <li>
+                  <a href="/member/memView.do?mnr=memView">회원정보수정</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="sec_customer">
+              <h3 class="tit_square">고객센터 안내</h3>
+                <b class="tel">1899-0017</b>
+                <p class="fax">Fax. 031-631-0461</p>
+                <dl class="txt_manage">
+                  <dt>운영시간</dt>
+                  <dd>- 차량운행시간 : 07:00 ~ 22:00</dd>
+                  <dd>- 상담시간 : 09:00 ~ 18:00</dd>
+                  <dt>이용요금</dt>
+                  <dd>- 기본요금 : 1,200원/10km</dd>
+                  <dd>- 추가요금 : 100원/5km</dd>
+                  <dd>* 왕복운행 대기요금 <br>
+                    1,000원/1시간<br>
+                    (최대 2시간 대기가능)</dd>
+                  <dd>* 고속도로 및 유로주자창 이용료별도</dd>
+                </dl>
+            </div>
+          </div>
+        </div>
+
+        <article class="cont_sub">
+          <div class="slogan">
+            <b>함께하는 우리 하나되는 세상</b>
+            <p>항상 사랑과 행복을 싣고<br> 언제나 여러분의 날개가 되어드리겠습니다!</p>
+          </div>
+          <div class="article_wrap">
+            <div class="tit_wrap">
+              <h2>회원가입</h2>
+              <div id="breadcrumb">
+                <a href="/main/main.do?mnr=main" class="home img_g">home</a>
+                <a href="/member/login.do?mnr=login">회원서비스</a>
+                <a href="/member/join.do?mnr=join">회원가입</a>
+              </div>
+            </div>
+            <div class="contents">
+              <div class="sec_g sec_agree">
+                <div class="wells">
+                  <p class="dot_ blue">회원가입을 위해서는 약관 동의가 필요하며, 아래의 이용약관을 읽으시고 동의를 체크하시기 바랍니다.</p>
+                </div>
+                <!-- 회원가입 -->
+
+                <!-- 이용약관 -->
+                <div class="wrap_agree">
+                  <h3 class="tit_square">이용약관</h3>
+                  <div class="box_">
+                    <div class="cont_agree">
+
+                      <h4>제 1 장 총 칙</h4>
+
+                      <h5>제 1 조 (목적)</h5>
+                      <ul>
+                        <li>이 이용약관(이하 '약관'이라 합니다)은 [ 이천시시설관리공단 ] 이용 고객(이하 '회원'이라 합니다)간에 공단이 제공하는 [ 이천시시설관리공단 ] 서비스(http://www.2000fmc.or.kr / , 이하 '[ 이천시시설관리공단 ]' 또는 '서비스'라 합니다)의 가입조건 및 이용에 관한 제반 사항과 기타 필요한 사항을 구체적으로 규정함을 목적으로 합니다.</li>
+                      </ul>
+
+                      <h5>제 2 조 (용어의 정의)</h5>
+                      <ul>
+                        <li>(1) 이 약관에서 사용하는 용어의 정의는 다음과 같습니다.</li>
+                        <li>- '회원'이라 함은 이 약관에 동의하고 서비스를 이용하는 이용자를 말합니다.</li>
+                        <li>- '이용계약'이라 함은 이 약관을 포함하여 서비스 이용과 관련하여 공단과 회원 간에 체결하는 모든 계약을 말합니다.</li>
+                        <li>- '이용자ID'라 함은 회원의 식별 및 서비스 이용을 위하여 회원의 신청에 따라 공단이 회원별로 부여하는 고유한 문자와 숫자의 조합을 말합니다.</li>
+                        <li>- '비밀번호'라 함은 이용자ID로 식별되는 회원의 본인 여부를 검증하기 위하여 회원이 설정하여 공단에 등록한 고유의 문자와 숫자의 조합을 말합니다.</li>
+                        <li>- '단말기'라 함은 서비스에 접속하기 위해 회원이 이용하는 개인용 컴퓨터, PDA, 휴대전화 등의 전산장치를 말합니다.</li>
+                        <li>- '해지'라 함은 공단 또는 회원이 이용계약을 해약하는 것을 말합니다.</li>
+                        <li>(2) 이 약관에서 사용하는 용어 중 제1항에서 정하지 아니한 것은 관계 법령 및 서비스별 안내에서 정하는 바에 따르며, 그 외에는 일반 관례에 따릅니다.</li>
+                      </ul>
+
+                      <h5>제 3 조 (이용약관의 효력 및 변경)</h5>
+                      <ul>
+                        <li>(1) 이 약관은 서비스를 통해 온라인으로 공시하고 회원의 동의와 공단의 승낙으로 효력을 발생하며, 합리적인 사유가 발생할 경우 공단은 관련 법령에 위배되지 않는 범위 안에서 개정할 수 있습니다. 개정된 약관은 정당한 절차에 따라 서비스를 통해 공지함으로써 효력을 발휘합니다.</li>
+                        <li>(2) 회원은 정기적으로 서비스를 방문하여 약관의 변경사항을 확인하여야 합니다. 변경된 약관에 대한 정보를 알지 못해 발생하는 회원의 피해는 공단에서 책임지지 않습니다.</li>
+                        <li>(3) 회원은 변경된 약관에 동의하지 않을 경우 회원 탈퇴(해지)를 요청할 수 있습니다.</li>
+                      </ul>
+
+                      <h5>제 4 조 (약관외 준칙)</h5>
+                      <ul>
+                        <li>공단은 필요한 경우 서비스 내의 개별항목에 대하여 개별약관 또는 운영원칙(이하 '서비스별 안내'라 합니다)를 정할 수 있으며, 이 약관과 서비스별 안내의 내용이 상충되는 경우에는 서비스별 안내의 내용을 우선하여 적용합니다.</li>
+                      </ul>
+
+                      <h4>제 2 장 이용계약 체결</h4>
+
+                      <h5>제 5 조 (이용 계약의 성립)</h5>
+                      <ul>
+                        <li>(1) 이용계약은 이용자의 이용계약 내용에 대한 동의와 이용신청에 대하여 공단의 이용승낙으로 성립합니다.</li>
+                        <li>(2) 이용계약에 대한 동의는 이용신청 당시 신청서 상의 '동의함' 버튼을 누름으로써 의사표시를 합니다.</li>
+                      </ul>
+
+                      <h5>제 6 조 (서비스 이용 신청)</h5>
+                      <ul>
+                        <li>(1) 회원으로 가입하여 서비스를 이용하고자 하는 이용자는 공단에서 요청하는 제반 정보(이용자ID, 비밀번호, 이름, 연락처 등)를 제공하여야 합니다.</li>
+                        <li>(2) 모든 회원은 반드시 회원 본인의 정보를 제공하여야만 서비스를 이용할 수 있으며, 타인의 정보를 도용하거나 허위의 정보를 등록하는 등 본인의 진정한 정보를 등록하지 않은 회원은 서비스 이용과 관련하여 아무런 권리를 주장할 수 없으며, 관계 법령에 따라 처벌 받을 수 있습니다.</li>
+                        <li>(3) 회원가입은 반드시 본인의 진정한 정보를 통하여만 가입할 수 있으며 공단은 회원이 등록한 정보에 대하여 확인조치를 할 수 있습니다. 회원은 공단의 확인조치에 대하여 적극 협력하여야 하며, 만일 이를 준수하지 아니할 경우 공단은 회원이 등록한 정보가 부정한 것으로 처리할 수 있습니다.</li>
+                        <li>(4) 공단은 회원에 대하여 등급별로 구분하여 이용시간, 이용회수, 서비스 메뉴 등을 세분하여 이용에 차등을 둘 수 있습니다.</li>
+                      </ul>
+
+                      <h5>제 7 조 (개인정보의 보호 및 사용)</h5>
+                      <ul>
+                        <li>(1) 공단은 관계 법령이 정하는 바에 따라 회원의 개인정보를 보호하기 위해 노력합니다. 개인정보의 보호 및 사용에 대해서는 관련 법령 및 공단의 개인정보 보호정책이 적용됩니다. 단, 공단의 공식 사이트 이외의 링크된 사이트에서는 공단의 개인정보 보호정책이 적용되지 않습니다. 또한, 회원은 비밀번호 등이 타인에게 노출되지 않도록 철저히 관리해야 하며 공단은 회원의 귀책사유로 인해 노출된 정보에
+                          대해서 책임을 지지 않습니다.</li>
+                        <li>(2) 공단은 다음과 같은 경우에 법이 허용하는 범위 내에서 회원의 개인정보를 제3자에게 제공할 수 있습니다.</li>
+                        <li>- 수사기관이나 기타 정부기관으로부터 정보제공을 요청 받은 경우</li>
+                        <li>- 회원의 법령 또는 약관의 위반을 포함하여 부정행위 확인 등의 정보보호 업무를 위해 필요한 경우</li>
+                        <li>- 기타 법률에 의해 요구되는 경우</li>
+                      </ul>
+
+                      <h5>제 8 조 (이용 신청의 승낙과 제한)</h5>
+                      <ul>
+                        <li>(1) 공단은 제5조, 제6조의 규정에 의한 이용신청에 대하여 업무 수행상 또는 기술상 지장이 없는 경우에 원칙적으로 접수순서에 따라 서비스 이용을 승낙합니다.</li>
+                        <li>(2) 공단은 아래사항에 해당하는 경우에 대해서 승낙을 보류할 수 있습니다.</li>
+                        <li>- 본인의 진정한 정보를 제공하지 아니한 이용신청의 경우</li>
+                        <li>- 법령 위반 또는 사회의 안녕과 질서, 미풍양속을 저해할 목적으로 신청한 경우</li>
+                        <li>- 부정한 용도로 본 서비스를 이용하고자 하는 경우</li>
+                        <li>- 영리를 추구할 목적으로 본 서비스를 이용하고자 하는 경우</li>
+                        <li>- 서비스와 경쟁관계에 있는 이용자가 신청하는 경우</li>
+                        <li>- 법령 또는 약관을 위반하여 이용계약이 해지된 적이 있는 이용자가 신청하는 경우</li>
+                        <li>- 기타 규정한 제반 사항을 위반하며 신청하는 경우</li>
+                        <li>(3) 공단은 서비스 이용신청이 다음 각 호에 해당하는 경우에는 그 신청에 대하여 승낙 제한사유가 해소될 때까지 승낙을 유보할 수 있습니다.</li>
+                        <li>- 공단이 설비의 여유가 없는 경우</li>
+                        <li>- 공단의 기술상 지장이 있는 경우</li>
+                        <li>- 기타 공단의 귀책사유로 이용승낙이 곤란한 경우</li>
+                        <li>(4) 공단은 이용신청고객이 관계 법령에서 규정하는 미성년자일 경우에 서비스별 안내에서 정하는 바에 따라 승낙을 보류할 수 있습니다.</li>
+                        <li>(5) 공단은 회원 가입 절차 완료 이후 제2항 각 호에 따른 사유가 발견된 경우 이용 승낙을 철회할 수 있습니다.</li>
+                      </ul>
+
+                      <h5>제 9 조 (이용자ID 부여 및 변경 등)</h5>
+                      <ul>
+                        <li>(1) 공단은 회원에 대하여 약관에 정하는 바에 따라 이용자 ID를 부여합니다.</li>
+                        <li>(2) 이용자ID는 원칙적으로 변경이 불가하며 부득이한 사유로 인하여 변경 하고자 하는 경우에는 해당 ID를 해지하고 재가입해야 합니다.</li>
+                        <li>(3) 서비스의 이용자ID는 회원 본인의 동의 하에 공단 또는 자공단이 운영하는 사이트의 회원ID와 연결될 수 있습니다.</li>
+                        <li>(4) 이용자ID는 다음 각 호에 해당하는 경우에는 회원의 요청 또는 공단의 직권으로 변경 또는 이용을 정지할 수 있습니다.</li>
+                        <li>- 이용자ID가 전화번호 또는 주민등록번호 등으로 등록되어 사생활 침해가 우려되는 경우</li>
+                        <li>- 타인에게 혐오감을 주거나 미풍양속에 어긋나는 경우</li>
+                        <li>- 공단, 공단의 서비스 또는 서비스 운영자 등의 명칭과 동일하거나 오인 등의 우려가 있는 경우</li>
+                        <li>- 기타 합리적인 사유가 있는 경우</li>
+                        <li>(5) 이용자ID 및 비밀번호의 관리책임은 회원에게 있습니다. 이를 소홀이 관리하여 발생하는 서비스 이용상의 손해 또는 제3자에 의한 부정이용 등에 대한 책임은 회원에게 있으며 공단은 그에 대한 책임을 지지 않습니다.</li>
+                        <li>(6) 기타회원 개인정보 관리 및 변경 등에 관한 사항은 서비스별 안내에 정하는 바에 의합니다.</li>
+                      </ul>
+
+                      <h4>제 3 장 계약 당사자의 의무</h4>
+
+                      <h5>제 10 조 (공단의 의무)</h5>
+                      <ul>
+                        <li>(1) 공단은 회원이 희망한 서비스 제공 개시일에 특별한 사정이 없는 한 서비스를 이용할 수 있도록 하여야 합니다.</li>
+                        <li>(2) 공단은 계속적이고 안정적인 서비스의 제공을 위하여 설비에 장애가 생기거나 멸실된 때에는 부득이한 사유가 없는 한 지체 없이 이를 수리 또는 복구합니다.</li>
+                        <li>(3) 공단은 개인정보 보호를 위해 보안시스템을 구축하며 개인정보 보호정책을 공시하고 준수합니다.</li>
+                        <li>(4) 공단은 회원으로부터 제기되는 의견이나 불만이 정당하다고 객관적으로 인정될 경우에는 적절한 절차를 거쳐 즉시 처리하여야 합니다. 다만, 즉시 처리가 곤란한 경우는 회원에게 그 사유와 처리일정을 통보하여야 합니다.</li>
+                      </ul>
+
+                      <h5>제 11 조 (회원의 의무)</h5>
+                      <ul>
+                        <li>(1) 회원은 회원가입 신청 또는 회원정보 변경 시 모든 사항을 사실에 근거하여 본인의 진정한 정보로 작성하여야 하며, 허위 또는 타인의 정보를 등록할 경우 이와 관련된 모든 권리를 주장할 수 없습니다.</li>
+                        <li>(2) 회원은 약관에서 규정하는 사항과 기타 공단이 정한 제반 규정, 공지사항 등 공단이 공지하는 사항 및 관계 법령을 준수하여야 하며, 기타 공단의 업무에 방해가 되는 행위, 공단의 명예를 손상시키는 행위, 타인에게 피해를 주는 행위를 해서는 안됩니다.</li>
+                        <li>(3) 회원은 주소, 연락처, 전자우편 주소 등 이용계약사항이 변경된 경우에 해당 절차를 거쳐 이를 공단에 즉시 알려야 합니다.</li>
+                        <li>(4) 회원은 공단의 사전 승낙 없이 서비스를 이용하여 영업활동을 할 수 없으며, 그 영업활동의 결과에 대해 공단은 책임을 지지 않습니다. 또한 회원은 이와 같은 영업활동으로 공단이 손해를 입은 경우, 회원은 공단에 대해 손해배상의무를 지며, 공단은 해당 회원에 대해 서비스 이용제한 및 적법한 절차를 거쳐 손해배상 등을 청구할 수 있습니다.</li>
+                        <li>(5) 회원은 공단의 명시적 동의가 없는 한 서비스의 이용권한, 기타 이용계약상의 지위를 타인에게 양도, 증여할 수 없으며 이를 담보로 제공할 수 없습니다.</li>
+                        <li>(6) 회원은 공단 및 제 3자의 지적 재산권을 포함한 제반 권리를 침해하거나 제18조 각 호에 해당하는 행위를 해서는 안됩니다.</li>
+                      </ul>
+
+                      <h4>제 4 장 서비스의 이용</h4>
+
+                      <h5>제 12 조 (서비스 이용 시간)</h5>
+                      <ul>
+                        <li>(1) 서비스 이용은 공단의 업무상 또는 기술상 특별한 지장이 없는 한 연중무휴, 1일 24시간 운영을 원칙으로 합니다. 단, 공단은 시스템 정기점검, 증설 및 교체를 위해 공단이 정한 날이나 시간에 서비스를 일시 중단할 수 있으며, 예정되어 있는 작업으로 인한 서비스 일시 중단은 서비스를 통해 사전에 공지합니다.</li>
+                        <li>(2) 공단은 긴급한 시스템 점검, 증설 및 교체, 설비의 장애, 서비스 이용의 폭주, 국가비상사태, 정전 등 부득이한 사유가 발생한 경우 사전 예고 없이 일시적으로 서비스의 전부 또는 일부를 중단할 수 있습니다.</li>
+                        <li>(3) 공단은 서비스 개편 등 서비스 운영 상 필요한 경우 회원에게 사전 예고 후 서비스의 전부 또는 일부의 제공을 중단할 수 있습니다.</li>
+                      </ul>
+
+                      <h5>제 13 조 (회원의 게시물 등)</h5>
+                      <ul>
+                        <li>(1) 게시물이라 함은 회원이 서비스를 이용하면서 게시한 글, 사진, 각종 파일과 링크 등을 말합니다.</li>
+                        <li>(2) 회원이 서비스에 등록하는 게시물 등으로 인하여 본인 또는 타인에게 손해나 기타 문제가 발생하는 경우 회원은 이에 대한 책임을 지게되며, 공단은 특별한 사정이 없는 한 이에 대하여 책임을 지지 않습니다.</li>
+                        <li>(3) 공단은 다음 각 호에 해당하는 게시물 등을 회원의 사전 동의 없이 임시게시 중단, 수정, 삭제,이동 또는 등록 거부 등의 관련 조치를 취할수 있습니다.</li>
+                        <li>- 다른 회원 또는 제 3자에게 심한 모욕을 주거나 명예를 손상시키는 내용인 경우</li>
+                        <li>- 공공질서 및 미풍양속에 위반되는 내용을 유포하거나 링크시키는 경우</li>
+                        <li>- 불법복제 또는 해킹을 조장하는 내용인 경우</li>
+                        <li>- 영리를 목적으로 하는 광고일 경우</li>
+                        <li>- 범죄와 결부된다고 객관적으로 인정되는 내용일 경우</li>
+                        <li>- 다른 이용자 또는 제 3자의 저작권 등 기타 권리를 침해하는 내용인 경우</li>
+                        <li>- 사적인 정치적 판단이나 종교적 견해의 내용으로 공단이 서비스 성격에 부합하지 않는다고 판단하는 경우</li>
+                        <li>- 공단에서 규정한 게시물 원칙에 어긋나거나, 게시판 성격에 부합하지 않는 경우</li>
+                        <li>- 기타 관계법령에 위배된다고 판단되는 경우</li>
+                        <li>(4) 공단은 게시물 등에 대하여 제3자로부터 명예훼손, 지적재산권 등의 권리 침해를 이유로 게시중단 요청을 받은 경우 이를 임시로 게시중단(전송중단)할 수 있으며, 게시중단 요청자와 게시물 등록자 간에 소송, 합의 기타 이에 준하는 관련기관의 결정 등이 이루어져 공단에 접수된 경우 이에 따릅니다.</li>
+                        <li>(5) 해당 게시물 등에 대해 임시게시 중단이 된 경우, 게시물을 등록한 회원은 재게시(전송재개)를 공단에 요청할 수 있으며, 게시 중단일로부터 3개월 내에 재게시를 요청하지 아니한 경우 공단은 이를 삭제할 수 있습니다.</li>
+                      </ul>
+
+                      <h5>제 14 조 (게시물에 대한 저작권)</h5>
+                      <ul>
+                        <li>(1) 공단이 작성한 게시물 또는 저작물에 대한 저작권 기타 지적재산권은 공단에 귀속합니다.</li>
+                        <li>(2) 회원이 서비스 내에 게시한 게시물의 저작권은 게시한 회원에게 귀속됩니다. 단, 공단은 서비스의 운영, 전시, 전송, 배포, 홍보의 목적으로 회원의 별도의 허락 없이 무상으로 저작권법에 규정하는 공정한 관행에 합치되게 합리적인 범위 내에서 다음과 같이 회원이 등록한 게시물을 사용할 수 있습니다.</li>
+                        <li>- 서비스 내에서 회원 게시물의 복제, 수정, 개조, 전시, 전송, 배포 및 저작물성을 해치지 않는 범위 내에서의 편집 저작물 작성</li>
+                        <li>- 미디어, 통신사 등 서비스 제휴 파트너에게 회원의 게시물 내용을 제공, 전시 혹은 홍보하게 하는 것. 단, 이 경우 공단은 별도의 동의 없이 회원의 이용자ID 외에 회원의 개인정보를 제공하지 않습니다.</li>
+                        <li>(3) 공단은 전항 이외의 방법으로 회원의 게시물을 이용하고자 하는 경우, 전화, 팩스, 전자우편 등의 방법을 통해 사전에 회원의 동의를 얻어야 합니다.</li>
+                        <li>(4) 회원이 이용계약 해지를 한 경우 본인 계정에 기록된 게시물(ex. 메일, 블로그, 마이홈 등) 일체는 삭제됩니다. 단, 타인에 의해 보관, 담기 등으로 재게시 되거나 복제된 게시물과 타인의 게시물과 결합되어 제공되는 게시물, 공용 게시판에 등록된 게시물 등은 그러하지 않습니다.</li>
+                      </ul>
+
+                      <h5>제 15 조 (정보의 제공)</h5>
+                      <ul>
+                        <li>(1) 공단은 회원에게 서비스 이용에 필요가 있다고 인정되는 각종 정보에 대해서 전자우편이나 서신, 우편, SMS, 전화 등의 방법으로 회원에게 제공할 수 있습니다.</li>
+                        <li>(2) 공단은 서비스 개선 및 회원 대상의 서비스 소개 등의 목적으로 회원의 동의 하에 관련 법령에 따라 추가적인 개인 정보를 수집할 수 있습니다.</li>
+                      </ul>
+
+                      <h5>제 16 조 (광고게재 및 광고주와의 거래)</h5>
+                      <ul>
+                        <li>(1) 공단이 회원에게 서비스를 제공할 수 있는 서비스 투자기반의 일부는 광고게재를 통한 수익으로부터 나옵니다. 회원은 서비스 이용시 노출되는 광고게재에 대해 동의합니다.</li>
+                        <li>(2)공단은 서비스상에 게재되어 있거나 서비스를 통한 광고주의 판촉활동에 회원이 참여하거나 교신 또는 거래를 함으로써 발생하는 손실과 손해에 대해 책임을 지지 않습니다.</li>
+                      </ul>
+
+                      <h4>제 5 장 계약 해지 및 이용 제한</h4>
+
+                      <h5>제 17 조 (계약 변경 및 해지)</h5>
+                      <ul>
+                        <li>(1) 회원이 이용계약을 해지하고자 하는 때에는 회원 본인이 서비스 내의 [고객센터] 메뉴를 이용해 가입해지를 해야 합니다.</li>
+                        <li>(2) 공단은 이용계약을 해지하는 경우 서비스 개인정보보호정책에 따라 회원 등록을 말소합니다. 이 경우 회원에게 이를 통지하며, 공단이 직권으로 이용계약을 해지하고자 하는 경우에는 말소 전에 회원에게 소명의 기회를 부여합니다.</li>
+                      </ul>
+
+                      <h5>제 18 조 (서비스 이용제한)</h5>
+                      <ul>
+                        <li>공단은 회원이 서비스 이용내용에 있어서 본 약관 제 11조 내용을 위반하거나, 다음 각 호에 해당하는 경우 서비스 이용 제한, 초기화, 이용계약 해지 및 기타 해당 조치를 할 수 있습니다.</li>
+                        <li>- 회원정보에 부정한 내용을 등록하거나 타인의 이용자ID, 비밀번호 기타 개인정보를 도용하는 행위 또는 이용자ID를 타인과 거래하거나 제공하는 행위</li>
+                        <li>- 공공질서 및 미풍양속에 위반되는 저속, 음란한 내용 또는 타인의 명예나 프라이버시를 침해할 수 있는 내용의 정보, 문장, 도형, 음향, 동영상을 전송, 게시, 전자우편 또는 기타의 방법으로 타인에게 유포하는 행위</li>
+                        <li>- 다른 이용자를 희롱 또는 위협하거나, 특정 이용자에게 지속적으로 고통 또는 불편을 주는 행위</li>
+                        <li>- 공단으로부터 특별한 권리를 부여 받지 않고 공단의 클라이언트 프로그램을 변경하거나, 공단의 서버를 해킹하거나, 웹사이트 또는 게시된 정보의 일부분 또는 전체를 임의로 변경하는 행위</li>
+                        <li>- 서비스를 통해 얻은 정보를 공단의 사전 승낙 없이 서비스 이용 외의 목적으로 복제하거나, 이를 출판 및 방송 등에 사용하거나, 제 3자에게 제공하는 행위</li>
+                        <li>- 공단의 운영진, 직원 또는 관계자를 사칭하거나 고의로 서비스를 방해하는 등 정상적인 서비스 운영에 방해가 될 경우</li>
+                        <li>- 정보통신 윤리위원회 등 관련 공공기관의 시정 요구가 있는 경우</li>
+                        <li>- 3개월 이상 서비스를 이용한 적이 없는 경우</li>
+                        <li>- 마이홈에 인덱스 파일없이 자료만 올려 놓고 파일 자료실 전용으로 이용하는 경우</li>
+                        <li>- 약관을 포함하여 공단이 정한 제반 규정을 위반하거나 범죄와 결부된다고 객관적으로 판단되는 등 제반 법령을 위반하는 행위</li>
+                        <li>- 본 약관 시행일 이후 마지막 로그인으로부터 3년 이상 홈페이지에 미 접속한 고객은 고객의 소중한 개인정보를 위해 회원탈퇴 처리되며 개인정보는 파기조치 됩니다.</li>
+                      </ul>
+
+                      <h4>제 6 장 손해배상 및 기타사항</h4>
+
+                      <h5>제 19 조 (손해배상)</h5>
+                      <ul>
+                        <li>(1) 공단과 이용자는 서비스 이용과 관련하여 고의 또는 과실로 상대방에게 손해를 끼친 경우에는 이를 배상하여야 한다.</li>
+                        <li>(2) 단, 공단은 무료로 제공하는 서비스의 이용과 관련하여 개인정보보호정책에서 정하는 내용에 위반하지 않는 한 어떠한 손해도 책임을 지지 않습니다.</li>
+                      </ul>
+
+                      <h5>제 20 조 (면책조항)</h5>
+                      <ul>
+                        <li>(1) 공단은 천재지변, 전쟁, 기간통신사업자의 서비스 중지 및 기타 이에 준하는 불가항력으로 인하여 서비스를 제공할 수 없는 경우에는 서비스 제공에 대한 책임이 면제됩니다.</li>
+                        <li>(2) 공단은 서비스용 설비의 보수, 교체, 정기점검, 공사 등 부득이한 사유로 발생한 손해에 대한 책임이 면제됩니다.</li>
+                        <li>(3) 공단은 회원의 컴퓨터 오류에 의해 손해가 발생한 경우, 또는 회원이 신상정보 및 전자우편 주소를 부실하게 기재하여 손해가 발생한 경우 책임을 지지 않습니다.</li>
+                        <li>(4) 공단은 회원이 서비스를 이용하여 기대하는 수익을 얻지 못하거나 상실한 것에 대하여 책임을 지지 않으며, 서비스를 이용하면서 얻은 자료로 인한 손해에 대하여 책임을 지지 않습니다.</li>
+                        <li>(5) 공단은 회원이 서비스에 게재한 각종 정보, 자료, 사실의 신뢰도, 정확성 등 내용에 대하여 책임을 지지 않으며, 회원 상호간 및 회원과 제 3자 상호 간에 서비스를 매개로 발생한 분쟁에 대해 개입할 의무가 없고, 이로 인한 손해를 배상할 책임도 없습니다.</li>
+                        <li>(6) 공단은 회원의 게시물을 등록 전에 사전심사 하거나 상시적으로 게시물의 내용을 확인 또는 검토하여야 할 의무가 없으며, 그 결과에 대한 책임을 지지 아니합니다.</li>
+                      </ul>
+
+                      <h5>제 21 조 (통지)</h5>
+                      <ul>
+                        <li>(1) 공단이 회원에 대하여 통지를 하는 경우 회원이 공단에 등록한 전자우편 주소로 할 수 있습니다.</li>
+                        <li>(2) 공단은 불특정다수 회원에게 통지를 해야 할 경우 공지 게시판을 통해 7일 이상 게시함으로써 개별 통지에 갈음할 수 있습니다.</li>
+                      </ul>
+
+                      <h5>제 22 조 (재판권 및 준거법)</h5>
+                      <ul>
+                        <li>(1) 이 약관에 명시되지 않은 사항은 전기통신사업법 등 대한민국의 관계법령과 상관습에 따릅니다.</li>
+                        <li>(2) 공단의 정액 서비스 회원 및 기타 유료 서비스 이용 회원의 경우 당해 서비스와 관련하여서는 공단이 별도로 정한 약관 및 정책에 따릅니다.</li>
+                        <li>(3) 서비스 이용으로 발생한 분쟁에 대해 소송이 제기되는 경우 대한민국 서울중앙지방법원을 관할 법원으로 합니다.</li>
+                      </ul>
+
+                      <h5>&lt;부칙&gt;</h5>
+                      <ul>
+                        <li>1. 본 약관은 2014년 4월 1일부터 적용됩니다.</li>
+                        <li>2. 본 약관은 2017년 6월 16일부터 적용됩니다.</li>
+                      </ul>
+
+                    </div>
+                    <div class="foot_agree">
+                      <div class="area_check">
+                        <input type="checkbox" id="check1" name="check1" onClick="chk1();" class="i_check" title="이용약관 동의" tabindex="1">
+                        <label for="check1">이용약관에 동의합니다. <em>(필수)</em></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- //이용약관 -->
+                <!-- 개인정보처리방침 -->
+                <div class="wrap_agree">
+                  <h3 class="tit_square">개인정보처리방침</h3>
+                  <div class="box_">
+                    <div class="cont_agree">
+
+                      <div class="box_agree">이천시시설관리공단(이하 "공단"이라 함)이 취급하는 모든 개인정보는 관련법령에 근거하거나 정보주체의 동의에 의하여 수집ㆍ보유 및 처리되고 있습니다.
+                        공단은 개인정보보호법 등 법령의 규정에 따라 수집·보유 및 처리하는 개인정보를 공공업무의 적절한 수행과 정보주체의 권익을 보호하기 위하여 적법하고 적정하게 취급하며 관련 규정을 준수합니다. 또한, 공단은 관련 법령에서 규정한 바에 따라 공단에서 보유하고 있는 개인정보에 대한 열람청구권 및 정정청구권 등 고객의 권익을 존중하며, 여러분은 이러한 법령상 권익의 침해 등에 대하여 행정심판법에서 정하는 바에
+                        따라 행정심판을 청구할 수 있으며, 개인정보분쟁조정위원회, 개인정보침해신고센터 등에 분쟁해결이나 상담 등을 신청할 수 있습니다.
+                        공단의 「개인정보처리방침」은 현행 「개인정보보호법」에 근거를 두고 있습니다. 이 방침은 별도의 설명이 없는 한 공단에서 운용하는 모든 홈페이지에 적용됨을 알려드립니다. 다만, 관계법령에 의한 소관업무를 위하여 공단 내 담당조직에서 별도의 개인정보 처리방침을 제정ㆍ시행하는 경우 이에 따르고, 이를 해당조직이 운영하는 홈페이지에 게시함을 알려드립니다.
+                      </div>
+
+                      <h4>1. 개인정보의 처리 목적</h4>
+
+                      <h5>① 공단은 다음의 목적을 위하여 개인정보를 처리합니다. 따라서, 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며, 이용 목적이 변경되는 경우에는 개인정보보호법 제18조에 따라 별도의 동의를 받아 처리하겠습니다.</h5>
+                      <ul>
+                        <li>가. 홈페이지 회원 가입 및 관리
+                          <ul>
+                            <li>회원 가입의사 확인, 회원제 서비스 제공에 따른 본인 식별·인증, 회원자격 유지·관리, 제한적 본인확인제 시행에 따른 본인확인, 서비스 부정이용 방지, 만 14세 미만 아동의 개인정보 처리시 법정대리인의 동의 여부 확인, 각종 고지·통지 등을 목적으로 개인정보를 처리합니다.</li>
+                          </ul>
+                        </li>
+                        <li>나. 민원사무 처리
+                          <ul>
+                            <li>민원인의 신원 확인, 민원사항 확인, 사실조사를 위한 연락·통지, 처리결과 통보 등의 목적으로 개인정보를 처리합니다.</li>
+                          </ul>
+                        </li>
+                        <li>다. 공단 업무 처리
+                          <ul>
+                            <li>공영주차장 고객관리, 이천 추모의 집 납골당 및 공설공원묘지 고객관리, 농업테마공원 고객관리, 교통약자 이동지원센터 고객관리를 목적으로 개인정보를 처리합니다.</li>
+                          </ul>
+                        </li>
+                        <li>라. 고객만족도 조사
+                          <ul>
+                            <li>보다 좋은 서비스 제공을 위한 고객 만족도 조사 목적으로 개인정보를 처리합니다.</li>
+                          </ul>
+                        </li>
+                      </ul>
+
+                      <h5>② 공단이 개인정보 보호법 제32조에 따라 등록·공개하는 개인정보파일 및 그 처리목적은 다음과 같습니다.</h5>
+                      <ul>
+                        <li>
+                          <table class="tbl_g">
+                            <caption>개인정보파일 및 그 처리목적</caption>
+                            <thead>
+                              <tr>
+                                <th scope="col" width="7%" height="35">연번</th>
+                                <th scope="col" width="22%">개인정보파일명</th>
+                                <th scope="col" width="27%">운영근거/처리목적</th>
+                                <th scope="col" width="36%">개인정보파일에 기록되는<br>개인정보의 항목</th>
+                                <th scope="col" width="8%">보유 기간</th>
+                              </tr>
+                            </thead>
+                              <tbody>
+                              <tr>
+                                <td><span class="style4">1</span></td>
+                                <td><span class="style4">공영주차장 월 정기권 이용자 명부</span></td>
+                                <td><span class="style4">이천시 주차장 설치 및 관리 조례/월 정기권 이용 고객 관리</span></td>
+                                <td><span class="style4">이름, 핸드폰(연락처), 기타(차량번호, 장애등급)</span></td>
+                                <td><span class="style4">5년</span></td>
+                              </tr>
+                              <tr>
+                                <td><span class="style4">2</span></td>
+                                <td><span class="style4">공영주차장 주차요금 관리대장</span></td>
+                                <td><span class="style4">주차장법 제9조/미납 주차요금 고지서 발송</span></td>
+                                <td><span class="style4">이름, 집주소, 기타(차량번호)</span></td>
+                                <td><span class="style4">5년</span></td>
+                              </tr>
+                              <tr>
+                                <td><span class="style4">3</span></td>
+                                <td><span class="style4">공영주차장 월정기권 차량변경 신청 관리 대장</span></td>
+                                <td><span class="style4">이천시 주차장 설치 및 관리 조례/월 정기권 이용 고객 관리</span></td>
+                                <td><span class="style4">이름, 핸드폰(연락처), 기타(차량번호)</span></td>
+                                <td><span class="style4">5년</span></td>
+                              </tr>
+                              <tr>
+                                <td><span class="style4">4</span></td>
+                                <td><span class="style4">공영주차장 월정기권/과오납 환급 신청 관리대장</span></td>
+                                <td><span class="style4">이천시 주차장 설치 및 관리 조례/월 정기권 이용 고객 관리</span></td>
+                                <td><span class="style4">이름, 핸드폰(연락처), 기타(차량번호), 계좌번호</span></td>
+                                <td><span class="style4">5년</span></td>
+                              </tr>
+                              <tr>
+                                <td><span class="style4">5</span></td>
+                                <td><span class="style4">주정차위반 견인차량 소유자 명부</span></td>
+                                <td><span class="style4">도로교통법 시행규칙 제22조 제5항</span></td>
+                                <td><span class="style4">견인요금 정산 및 견인 차량 관리</span></td>
+                                <td><span class="style4">5년</span></td>
+                              </tr>
+                              <tr>
+                                <td><span class="style4">6</span></td>
+                                <td><span class="style4">납골당 및 공설공원묘지 봉안관리 대장</span></td>
+                                <td><span class="style4">장사 등에 관한 법률 시행규칙 제10조/납골당 및 묘지 관리</span></td>
+                                <td><span class="style4">이름, 집주소, 집연락처, 핸드폰(연락처), 주민번호</span></td>
+                                <td><span class="style4">준영구</span></td>
+                              </tr>
+                              <tr>
+                                <td>7</td>
+                                <td>이천농업테마공원 대관허가 신청 관리대장</td>
+                                <td>이천시 농업테마공원 운영 조례/이천농업테마공원 시설물 대관 등 서비스 제공</td>
+                                <td>이름, 직장주소, 직장연락처, 핸드폰(연락처), 생년월일</td>
+                                <td>5년</td>
+                              </tr>
+                              <tr>
+                                <td>8</td>
+                                <td>이천시 교통약자 이동지원센터 심사승인처리부</td>
+                                <td>교통약자 이동편의 증진법 제16조/교통약자 이동지원센터 이용 회원 관리</td>
+                                <td>이름, 집주소, 집연락처, 핸드폰(연락처), 생년월일, 기타(성별, 장애유형 및 등급)</td>
+                                <td>5년</td>
+                              </tr>
+                              <tr>
+                                <td>9</td>
+                                <td>이천시 교통약자 이동지원센터 이용대상자 관리</td>
+                                <td>교통약자 이동 편의 증진법 제16조/교통약자 이용 회원 관리</td>
+                                <td>이름, 집주소, 집연락처, 핸드폰(연락처), 생년월일, 기타(성별, 장애유형 및 등급)</td>
+                                <td>5년</td>
+                              </tr>
+                              <tr>
+                                <td>10</td>
+                                <td>이천시 교통약자 이동지원센터 요청서</td>
+                                <td>이천시 교통약자의 이동편의 증진에 관한 업무지침 제7조/이용대상자 관리 등</td>
+                                <td>이름, 집주소, 핸드폰(연락처), 생년월일</td>
+                                <td>5년</td>
+                              </tr>
+                              <tr>
+                                <td>11</td>
+                                <td>이천농업테마공원 숙박이용자명단</td>
+                                <td>이천시 농업테마공원 운영 조례 제13조의12/이천농업테마공원 숙박 이용 고객 관리</td>
+                                <td>성명, 연락처, 이메일, 생년월일, 주소(할인 시), 통장사본(환불 시)</td>
+                                <td>3년</td>
+                              </tr>
+                              <tr>
+                                <td>12</td>
+                                <td>이천농업테마공원 체험예약현황</td>
+                                <td>이천시 농업테마공원 운영 조례/효율적인 체험운영 관리</td>
+                                <td>성명, 연락처</td>
+                                <td>3년</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </li>
+                        <li>※ 좀더 상세한 공단의 개인정보파일 등록사항 공개는 안전행정부 개인정보보호 종합지원 포털(www.privacy.go.kr)→ 개인정보민원 → 개인정보열람등 요구 → 개인정보파일 목록검색 메뉴를 활용해주시기 바랍니다.</li>
+                      </ul>
+
+                      <h4>2. 개인정보의 처리 및 보유기간</h4>
+
+                      <h5>① 공단은 법령에 따른 개인정보 보유·이용기간 또는 정보주체로부터 개인정보를 수집 시에 동의받은 개인정보 보유·이용기간 내에서 개인정보를 처리·보유합니다.</h5>
+                      <h5>② 각각의 개인정보 처리 및 보유 기간은 다음과 같습니다.</h5>
+                      <ul>
+                        <li>가. 홈페이지 회원 가입 및 관리 : 홈페이지 회원 탈퇴 시까지<br>다만, 다음의 사유에 해당하는 경우에는 해당 사유 종료시까지
+                          <ul>
+                            <li>1) 관계 법령 위반에 따른 수사·조사 등이 진행중인 경우에는 해당 수사·조사 종료시까지</li>
+                            <li>2) 홈페이지 이용에 따른 채권·채무관계 잔존시에는 해당 채권·채무관계 정산시까지</li>
+                            <li>3) 3년 이상 미 접속 고객일 경우 개인정보 파기</li>
+                          </ul>
+                        </li>
+                        <li>나. 민원사무 처리 : 민원처리 종료 후 3년
+                          <ul>
+                            <li>민원고충처리 목적으로 개인정보를 처리 합니다.</li>
+                          </ul>
+                        </li>
+                        <li>다. 공영주차장 월정기권 이용자 관리, 공영주차장 주차요금 관리, 공영주차장 월정기권 차량변경 신청 관리, 공영주차장 월정기권/과오납 환급 신청 관리, 이천농업테마공원 대관허가 신청 관리, 이천시 교통약자 이동지원센터 심사승인 관리, 이천시 교통약자 이동지원센터 이용자 관리 : 5년</li>
+                        <li>라. 이천 추모의 집 납골당 및 공설공원묘지 봉안관리 : 준영구</li>
+                      </ul>
+
+                      <h4>3. 개인정보의 제3자 제공</h4>
+                      <h5>공단이 수집·보유하고 있는 개인정보는 이용자의 동의 없이는 제3자에게 제공하지 않습니다. 공단이 통상적으로 다른 기관에 제공하는 개인정보 현황은 없습니다.</h5>
+
+                      <h4>4. 개인정보처리의 위탁</h4>
+                      <h5>① 공단은 원활한 업무처리를 위하여 다음과 같이 개인정보 처리업무를 위탁하고 있습니다.</h5>
+                      <ul>
+                        <li>가. 전산 네트워크 및 보안장비 유지보수
+                          <ul>
+                            <li>- 위탁받는 자 (수탁자) : (주)이케이오스 (TEL.02-782-6745)</li>
+                            <li>- 위탁하는 업무의 내용 : 전산 네트워크 및 보안장비 유지관리</li>
+                          </ul>
+                        </li>
+                        <li> 나. 전자문서프로그램 유지보수
+                          <ul>
+                            <li>- 위탁받는 자 (수탁자) : (주)아이엔씨솔루션 (TEL.02-782-6745)</li>
+                            <li>- 위탁하는 업무의 내용 : 전자문서프로그램 유지관리</li>
+                          </ul>
+                        </li>
+                        <li>다. 주차장 운영관리 시스템 유지보수
+                          <ul>
+                            <li>- 위탁받는 자 (수탁자) : (주)케이앤엘정보시스템(TEL.02-454-1984)</li>
+                            <li>- 위탁하는 업무의 내용 : 입출차, 미납차량, 정기권 관리</li>
+                          </ul>
+                        </li>
+                        <!--<li>라. 공영주차장 미납요금 고지서 발송
+				<ul>
+					<li>- 위탁받는 자 (수탁자) : (주)포스토피아 (TEL.1577-8114)</li>
+					<li>- 위탁하는 업무의 내용 : 미납주차요금 고지서 발송</li>
+				</ul>
+			</li> -->
+                        <li>라. 백업시스템 유지·보수
+                          <ul>
+                            <li>- 위탁받는 자 (수탁자) : (주)유비디에스(TEL.02-2606-1525)</li>
+                            <li>- 위탁하는 업무의 내용 : 공단 백업시스템 유지관리</li>
+                          </ul>
+                        </li>
+                        <li>마. 농업테마공원 홈페이지 유지관리
+                          <ul>
+                            <li>- 위탁받는 자 (수탁자) : ㈜상상을 만드는 사람들(TEL.031-632-8651)</li>
+                            <li>- 위탁하는 업무의 내용 : 농업테마공원 홈페이지 유지관리</li>
+                          </ul>
+                        </li>
+                      </ul>
+
+                      <h5>② 공단은 개인정보 처리업무 위탁계약 체결시 개인정보 보호법 제26조에 따라 위탁업무 수행목적 외 개인정보 처리금지, 기술적·관리적 보호조치, 재위탁 제한, 수탁자에 대한 관리·감독, 손해배상 책임에 관한 사항을 계약서 등 문서에 명시하고, 수탁자가 개인정보를 안전하게 처리하는지를 감독하고 있습니다.</h5>
+                      <h5>③ 위탁업무의 내용이나 수탁자가 변경될 경우에는 지체없이 본 개인정보 처리방침을 통하여 공개하도록 하겠습니다.</h5>
+
+                      <h4>5. 정보주체의 권리·의무 및 그 행사방법</h4>
+                      <h5>① 정보주체는 공단에 대해 언제든지 다음 각 호의 개인정보 보호 관련 권리를 행사할 수 있습니다.</h5>
+                      <ul>
+                        <li>가. 개인정보 열람요구 : 공단에서 보유하고 있는 개인정보파일은 「개인정보보호법」제35조(개인정보의 열람)에 따라 열람을 요구할 수 있습니다. 다만, 개인정보 열람 요구는 「개인정보보호법」 제35조제4항 에 의하여 다음과 같이 제한될 수 있습니다.
+                          <ul style="padding:5px 5px 5px 10px; background-color:#F7F7F7;">
+                            <li>가. 법률에 따라 열람이 금지되거나 제한되는 경우</li>
+                            <li>나. 다른 사람의 생명·신체를 해할 우려가 있거나 다른 사람의 재산과 그 밖의 이익을 부당하게 침해 할 우려가 있는 경우</li>
+                            <li>다. 공공기관이 다음 각 목의 어느 하나에 해당하는 업무를 수행할 때 중대한 지장을 초래하는 경우
+                              <ul>
+                                <li>① 조세의 부과·징수 또는 환급에 관한 업무</li>
+                                <li>②「초·중등교육법」 및 「고등교육법」에 따른 각급 학교, 「평생교육법」에 따른 평생교육시설, 그 밖의 다른 법률에 따라 설치 된 고등교육기관에서의 성적 평가 또는 입학자 선발에 관한 업무</li>
+                                <li>③ 학력·기능 및 채용에 관한 시험, 자격 심사에 관한 업무</li>
+                                <li>④ 보상금·급부금 산정 등에 대하여 진행 중인 평가 또는 판단에 관한 업무</li>
+                                <li>⑤ 다른 법률에 따라 진행 중인 감사 및 조사에 관한 업무</li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                        <li>나. 개인정보의 정정, 삭제 요구 : 공단에서 보유하고 있는 개인정보파일에 대해서는 「개인정보 보호법」 제36조(개인정보의 정정·삭제)에 따라 공단에 개인정보의 정정·삭제를 요구할 수 있습니다. 다만, 다른 법령에서 그 개인정보가 수집 대상으로 명시되어 있는 경우에는 그 삭제를 요구할 수 없습니다.</li>
+                        <li>다. 개인정보의 처리정지 요구 : 공단에서 보유하고 있는 개인정보파일에 대해서는 「개인정보보호법」 제37조(개인정보의처리 정지 등)에 따라 공단에 개인정보의 처리정지를 요구할 수 있습니다. 또한 만 14세 미만 아동 의 법정대리인은 공단에 그 아동의 개인정보의 열람, 정정·삭제, 처리정지 요구를 할 수 있습니다. 다만, 개인정보 처리정지 요구시 「개인정보보호법」 제37조 제2항에 의하여
+                          처리정지 요구가 거절될 수 있습니다.
+                          <ul style="padding:5px 5px 5px 10px; background-color:#F7F7F7;">
+                            <li>가. 법률에 특별한 규정이 있거나 법령상 의무를 준수하기 위하여 불가피한 경우</li>
+                            <li>나. 다른 사람의 생명·신체를 해할 우려가 있거나 다른 사람의 재산과 그 밖의 이익을 부당 하게 침해할 우려가 있는 경우</li>
+                            <li>다. 공공기관이 개인정보를 처리하지 아니하면 다른 법률에서 정하는 소관 업무를 수행할 수 없는 경우</li>
+                            <li>라. 개인정보를 처리하지 아니하면 정보주체와 약정한 서비스를 제공하지 못하는 등 계약의 이행이 곤란한 경우로서 정보주체가 그 계약의 해지 의사를 명확하게 밝히지 아니한 경우</li>
+                          </ul>
+                        </li>
+                      </ul>
+
+                      <h5>② 제1항에 따른 권리 행사는 공단에 대해 개인정보 보호법 시행규칙 별지 제8호 서식에 따라 서면, 전자 우편, 모사전송(FAX) 등을 통하여 할 수 있습니다.</h5>
+                      <h5>③ 정보주체가 개인정보의 오류 등에 대한 정정 또는 삭제를 요구한 경우에는 공단은 정정 또는 삭제를 완료할 때까지 당해 개인정보를 이용하거나 제공하지 않습니다.</h5>
+                      <h5>④ 제1항에 따른 권리 행사는 정보주체의 법정대리인이나 위임을 받은 자 등 대리인을 통하여 하실 수 있습니다. 이 경우 개인정보 보호법 시행규칙 별지 제11호 서식에 따른 위임장을 제출하셔야 합니다.</h5>
+                      <h5>⑤ 개인정보의 열람, 정정, 삭제, 처리정지 요구 접수·처리 부서와 담당자는 아래와 같습니다.</h5>
+                      <ul>
+                        <li>부서 : 이천시시설관리공단 경영지원팀</li>
+                        <li>담당자 : 황은미 (TEL.031-632-6670/ FAX.031-632-6681)</li>
+                        <li>주소 : 경기도 이천시 부발읍 중부대로 1696</li>
+                      </ul>
+                      <h5>⑥ 개인정보의 열람, 정정·삭제, 처리정지 요구에 대해서는 10일 이내에 해당 사항에 대한 조치를 통지합니다. 개인정보의 열람, 정정·삭제, 처리정지 요구는 해당부서를 통해 가능하며, 서식은 개인정보보호법 시행령 별지 제8호서식 개인정보 (열람, 정정·삭제, 처리정지) 요구서와 같습니다.</h5>
+                      <h5>⑦ 정보주체가 열람 등 요구에 대한 거절 등 조치에 대하여 불복이 있는 경우 이의를 제기할 수 있도록 필요한 절차를 다음과 같이 안내합니다.</h5>
+                      <ul>
+                        <li>가. 불복사유
+                          <ul>
+                            <li>1) 정보공개 청구에 대한 공단의 열람 거절</li>
+                            <li>2) 정보공개 청구에 대한 공단의 일부 열람</li>
+                            <li>3) 정보공개 청구일로부터 20일 이내에 공단이 공개여부를 통지하지 않은 경우</li>
+                          </ul>
+                        </li>
+                        <li>나. 처리절차
+                          <ul>
+                            <li>1) 이의신청 : 공단으로부터 열람여부의 결정통지를 받은 날 또는 열람·거절의 결정이 있는 것으로 보는 날부터 “30일”이내 제기</li>
+                            <li>2) 행정심판 : 처분이 있음을 안 날로부터 “90일”이내 제기(처분이 있은 날로 부터 180일이 경과하면 제기 불가)</li>
+                            <li>3) 행정소송 : 처분 등이 있음을 안 날로부터 “90”일 이내(처분 등이 있은 날로부터 1년을 경과하면 제기 불가)
+                              <ul>
+                                <li>※ 정보공개 결정 등 이의신청서 서식은 공공기관의 정보공개에 관한 법률 시행규칙 별지 제9호서식과 같습니다.</li>
+                                <li>※ 접수처리부서 : 경영지원팀(TEL.031-632-6670/ FAX.031-632-6681)</li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+
+                      <h4>6. 개인정보의 파기</h4>
+                      <ul>
+                        <li>① 공단은 개인정보 보유기간의 경과, 처리목적 달성 등 개인정보가 불필요하게 되었을 때에는 지체없이 해당 개인정보를 파기합니다.</li>
+                        <li>② 정보주체로부터 동의 받은 개인정보 보유기간이 경과하거나 처리목적이 달성되었음에도 불구하고 다른 법령에 따라 개인정보를 계속 보존하여야 하는 경우에는, 해당 개인정보(또는 개인정보파일)를 별도의 데이터베이스(DB)로 옮기거나 보관장소를 달리하여 보존합니다.</li>
+                        <li>③ 개인정보 파기의 절차 및 방법은 다음과 같습니다.
+                          <ul>
+                            <li>가. 파기절차
+                              <ul>
+                                <li>공단은 파기하여야 하는 개인정보(또는 개인정보파일)에 대해 개인정보 파기 계획을 수립하여 파기합니다. 공단은 파기 사유가 발생한 개인정보(또는 개인정보파일)를 선정하고, 공단의 개인정보 보호책임자의 승인을 받아 개인정보 (또는 개인정보파일)를 파기합니다.</li>
+                              </ul>
+                            </li>
+                            <li>나. 파기방법
+                              <ul>
+                                <li>- 전자적파일 형태 : 재생불가능한 기술적방법을 사용하여 파기 후 파기여부 확인
+                                  <ul>
+                                    <li>* 컴퓨터 등의 불용처분 및 매각시 저장된 내용의 완전 삭제</li>
+                                  </ul>
+                                </li>
+                                <li>- 출력물 : 폐휴지 수집업자에 출력물의 원형으로 매각 등 금지
+                                  <ul>
+                                    <li>* 원형으로 매각할 경우 제지공장의 용해작업을 현장 확인<br>직접 파쇄 조치 후 매각(분쇄기로 분쇄 또는 소각처리)</li>
+                                    <li>* 매각 및 처리를 위탁할 경우에는 사전에 대책 강구</li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+
+                      <h4>7. 개인정보의 안전성 확보조치</h4>
+                      <h5>① 공단은 개인정보의 안전성 확보를 위해 다음과 같은 조치를 취하고 있습니다.</h5>
+                      <ul>
+                        <li>가. 관리적 조치
+                          <ul>
+                            <li>1) 기관 내부 관리계획 수립 및 시행</li>
+                            <li>2) 개인정보보호책임자 지정</li>
+                            <li>3) 개인정보 영향평가 실시</li>
+                            <li>4) 개인정보 처리 사실에 대한 사전고지
+                              <ul>
+                                <li>- 개인정보처리방침 수립 및 공개</li>
+                                <li>- 영상정보처리기기의 운영 및 관리방침</li>
+                                <li>- 영상정보 처리기기의 설치시 안내판</li>
+                                <li>- 개인정보파일의 등록·관리</li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                        <li>나. 기술적 조치
+                          <ul>
+                            <li>1) 개인정보에 대한 접근통제 및 접근 권한의 제한</li>
+                            <li>2) 개인정보의 저장·전송시 암호화 조치</li>
+                            <li>3) 개인정보 접속기록의 보관 및 위조·변조 방지 조치</li>
+                            <li>4) 개인정보처리시스템에 대한 보안프로그램의 설치·갱신</li>
+                          </ul>
+                        </li>
+                        <li>다. 물리적 조치
+                          <ul>
+                            <li>1) 전산실, 자료보관실 등의 출입통제 시설의 마련</li>
+                            <li>2) 서류, 보조기억매체 등에 대한 잠금장치의 설치</li>
+                          </ul>
+                        </li>
+                      </ul>
+
+                      <h5>② 홈페이지에서 운영하는 보안조치</h5>
+                      <ul>
+                        <li>홈페이지의 보안 또는 지속적인 서비스를 위해, 공단은 네트워크 트래픽의 통제(Monitor)는 물론 불법적으로 정보를 변경하는 등의 시도를 탐지하기 위해 여러 가지 보안프로그램을 운영하고 있습니다.</li>
+                      </ul>
+
+                      <h4>8. 인터넷 접속정보파일 등 개인정보를 자동으로 수집하는 장치의 설치, 운영 및 그 거부에 관한 사항</h4>
+                      <ul>
+                        <li>① 공단은 이용자에게 개별적인 맞춤서비스를 제공하기 위해 이용정보를 저장하고 수시로 불러오는 '쿠키(cookie)'를 사용합니다.</li>
+                        <li>② 쿠키는 웹사이트를 운영하는데 이용되는 서버(http)가 이용자의 컴퓨터 브라우저에게 보내는 소량의 정보이며 이용자의 PC 컴퓨터내의 하드디스크에 저장되기도 합니다.
+                          <ul>
+                            <li>가. 쿠키의 사용목적 : 이용자가 방문한 각 서비스와 웹사이트들에 대한 방문 및 이용형태, 인기검색어, 보안접속 여부 등을 파악하여 이용자에게 최적화된 정보 제공을 위해 사용됩니다.</li>
+                            <li>나. 쿠키의 설치·운영 및 거부 : 웹브라우저 상단의 도구&gt;인터넷옵션&gt;개인정보 메뉴의 옵션 설정을 통해 쿠키 저장을 거부할 수 있습니다.</li>
+                            <li>다. 쿠키 저장을 거부할 경우 맞춤형 서비스 이용에 어려움이 발생할 수 있습니다.</li>
+                          </ul>
+                        </li>
+                      </ul>
+
+
+                      <h4>9. 개인정보보호책임자</h4>
+                      <h5>① 공단은 개인정보 처리에 관한 업무를 총괄해서 책임지고, 개인정보 처리와 관련한 정보주체의 불만처리 및 피해구제 등을 위하여 아래와 같이 개인정보 보호책임자를 지정하고 있습니다.</h5>
+                      <ul>
+                        <li>▶ 개인정보 보호책임자
+                          <ul>
+                            <li>성명 : 정연민</li>
+                            <li>직책 : 경영지원팀장</li>
+                            <li>직급 : 5급</li>
+                            <li>연락처 : TEL. 070-4174-6566 / FAX. 031)632-6681</li>
+                          </ul>
+                        </li>
+                        <li>▶ 개인정보 보호 담당부서 및 담당자
+                          <ul>
+                            <li>부서명 : 경영지원팀</li>
+                            <li>담당자 : 황은미</li>
+                            <li>연락처 : TEL. 031-632-6670 / FAX. 031)632-6681</li>
+                          </ul>
+                        </li>
+                      </ul>
+
+                      <h5>② 고객은 공단 업무에서 발생한 모든 개인정보 보호관련 문의, 불만처리, 피해구제 등에 관한 사항을 개인정보 보호책임자 및 담당부서로 문의하실 수 있습니다. 공단은 고객의 문의에 대해 지체없이 답변 및 처리해드릴 것입니다.</h5>
+
+                      <h4>10. 개인정보 열람청구</h4>
+                      <h5>① 고객은 개인정보 보호법 제35조에 따른 개인정보의 열람 청구를 아래의 부서에 할 수 있습니다. 공단은 정보주체의 개인정보 열람청구가 신속하게 처리되도록 노력하겠습니다.</h5>
+                      <ul>
+                        <li>▶ 개인정보 열람청구 접수·처리 부서
+                          <ul>
+                            <li>부서명 : 경영지원팀</li>
+                            <li>담당자 : 황은미</li>
+                            <li>연락처 : TEL. 031-632-6670 / FAX. 031)632-6681</li>
+                          </ul>
+                        </li>
+                      </ul>
+
+                      <h5>② 고객은 제1항의 열람청구 접수·처리부서 이외에, 안전행정부의 ‘개인정보보호 종합지원 포털 웹사이트(www.privacy.go.kr)를 통하여서도 개인정보 열람청구를 하실 수 있습니다.</h5>
+                      <ul>
+                        <li>▶ 안전행정부 개인정보보호 종합지원 포털 → 개인정보 민원 → 개인정보 열람등 요구</li>
+                      </ul>
+
+                      <h4>11. 권익침해 구제방법</h4>
+                      <h5>고객은 아래의 기관에 대해 개인정보 침해에 대한 피해구제, 상담 등을 문의하실 수 있습니다.<br>&lt;아래의 기관은 공단과는 별개의 기관으로서, 공단의 자체적인 개인정보 불만처리, 피해구제 결과에 만족하지 못하시거나 보다 자세한 도움이 필요하시면 문의하여 주시기 바랍니다.&gt;</h5>
+                      <ul>
+                        <li>▶ 개인정보 침해신고센터 (한국인터넷진흥원 운영)
+                          <ul>
+                            <li>- 소관업무 : 개인정보 침해사실 신고, 상담 신청</li>
+                            <li>- 홈페이지 : privacy.kisa.or.kr</li>
+                            <li>- 전화 : (국번없이) 118</li>
+                            <li>- 주소 : (58324) 전남 나주시 진흥길 9(빛가람동 301-2) 3층 개인정보침해신고센터</li>
+                          </ul>
+                        </li>
+                        <li>▶ 개인정보 분쟁조정위원회 (개인정보 보호위원회 운영)
+                          <ul>
+                            <li>- 소관업무 : 개인정보 분쟁조정신청, 집단분쟁조정 (민사적 해결)</li>
+                            <li>- 홈페이지 : www.kopico.go.kr</li>
+                            <li>- 전화 : 1833-6972</li>
+                            <li>- 주소 : (03171) 서울시 종로구 세종대로 209 정부서울청사 4층</li>
+                          </ul>
+                        </li>
+                        <li>▶ 대검찰청 사이버범죄수사단
+                          <ul>
+                            <li>- 02-3480-3573 (www.spo.go.kr)</li>
+                          </ul>
+                        </li>
+                        <li>▶ 경찰청 사이버안전국
+                          <ul>
+                            <li>- (국번없이)182 (http://cyberbureau.police.go.kr)</li>
+                          </ul>
+                        </li>
+                      </ul>
+
+                      <h4>12. 영상정보처리기기 운영·관리 방침</h4>
+                      <h5>공단은 범죄예방, 증거확보, 시설안전, 화재예방 등 공익을 위하여 CCTV를 설치·운영함에 있어서 법령의 규정에 의해서만 영상정보를 수집·보유하며, 다음과 같이 영상정보처리기기를 운영·관리합니다.</h5>
+                      <ul>
+                        <li>▶ CCTV 설치·운영 현황
+                          <ul>
+                            <li>
+                              <table class="tbl_g">
+                                <caption>CCTV 설치·운영 현황</caption>
+                                <thead>
+                                  <tr>
+                                    <th scope="col" rowspan="2">연번</th>
+                                    <th scope="col" rowspan="2">설치장소</th>
+                                    <th scope="col" rowspan="2">설치목적</th>
+                                    <th scope="col" rowspan="2">설치대수</th>
+                                    <th scope="col" rowspan="2">책임자</th>
+                                    <th scope="col" height="35" colspan="2">촬영내역</th>
+                                    <th scope="col" colspan="2">화상정보 관리</th>
+                                  </tr>
+                                  <tr>
+                                    <th scope="col">촬영범위</th>
+                                    <th scope="col">촬영시간</th>
+                                    <th scope="col">보유기간</th>
+                                    <th scope="col">삭제방법</th>
+                                  </tr>
+                                </thead>
+                                  <tbody>
+                                  <tr>
+                                    <td rowspan="2">1</td>
+                                    <td rowspan="2">노상주차장</td>
+                                    <td rowspan="2">안전사고 예방</td>
+                                    <td rowspan="2">63</td>
+                                    <td rowspan="2">고주련<br>(교통관리팀장)</td>
+                                    <td rowspan="2">주차면</td>
+                                    <td>24시간</td>
+                                    <td>60일</td>
+                                    <td rowspan="2">자동삭제</td>
+                                  </tr>
+                                  <tr>
+                                    <td>7~22시</td>
+                                    <td>60일</td>
+                                  </tr>
+                                  <tr>
+                                    <td>2</td>
+                                    <td>중리천로/터미널 주차장</td>
+                                    <td>안전사고 예방</td>
+                                    <td>8</td>
+                                    <td>고주련<br>(교통관리팀장)</td>
+                                    <td>주차면 및 출입구</td>
+                                    <td>24시간</td>
+                                    <td>30일</td>
+                                    <td>자동삭제</td>
+                                  </tr>
+                                  <tr>
+                                    <td>3</td>
+                                    <td>북샛말주차장</td>
+                                    <td>안전사고 예방</td>
+                                    <td>16</td>
+                                    <td>고주련<br>(교통관리팀장)</td>
+                                    <td>주차면 및 출입구</td>
+                                    <td>24시간</td>
+                                    <td>30일</td>
+                                    <td>자동삭제</td>
+                                  </tr>
+                                  <tr>
+                                    <td>4</td>
+                                    <td>이천 추모의 집 및 백사공설묘지</td>
+                                    <td>시설물 관리 및<br> 안전사고 예방</td>
+                                    <td>8</td>
+                                    <td>고주련<br>(교통관리팀장)</td>
+                                    <td>시설물 내외부</td>
+                                    <td>24시간</td>
+                                    <td>30일</td>
+                                    <td>자동삭제</td>
+                                  </tr>
+                                  <tr>
+                                    <td>5</td>
+                                    <td>농업테마공원</td>
+                                    <td>시설물 관리 및<br> 안전사고 예방</td>
+                                    <td>22</td>
+                                    <td>박태훈<br>(시설환경팀장)</td>
+                                    <td>공원외부 및 건물내부</td>
+                                    <td>24시간</td>
+                                    <td>17일</td>
+                                    <td>자동삭제</td>
+                                  </tr>
+                                  <tr>
+                                    <td>6</td>
+                                    <td>교통약자 이동지원센터 특별교통수단</td>
+                                    <td>이용자의 안전과 사고<br>발생시 증거수집</td>
+                                    <td>24</td>
+                                    <td>조양수<br>(이동지원센터장)</td>
+                                    <td>차량 내외부</td>
+                                    <td>차량 운행중</td>
+                                    <td>2일</td>
+                                    <td>자동삭제</td>
+                                  </tr>
+
+                                </tbody>
+                              </table>
+                            </li>
+                            <li><strong>* 영상정보 보관장소 : 공영주차장, 이천 추모의 집, 농업테마공원, 이동지원센터 사무실 내 업무용 PC 및 외부저장기록매체(하드디스크)</strong></li>
+                            <li><strong>* 영상정보 접근권한 : 각 사업장 업무담당자</strong></li>
+                            <li><strong>* 영상정보 보호를 위한 관리적·기술적·물리적조치는 공단 개인정보처리방침을 준용합니다.</strong><br>개인정보에 대한 접근 권한을 차등부여하고 있고, 개인영상정보의 위변조 방지를 위하여 개인 영상정보 열람 시 열람 목적, 열람자, 열람 일시 등을 기록하여 관리하고 있습니다. 이 외에도 개인영상정보의 안전한 물리적 보관을 위하여 잠금장치를 설치하고 있습니다.</li>
+                            <li>① CCTV설치 시 의견수렴 절차이행
+                              <ul>
+                                <li>개인정보보호법 제25조(영상정보처리기기의 설치·운영 제한) 및 동법 시행령 제23조(민감정보의 처리제한)에 따라 공청회 등을 통해 관계 전문가 및 이해관계인에 대한 의견수렴 절차를 거친 후(이천시 공고 제2013-833호/2013.05.20.) 영상정보처리기기를 설치하고 있으며, 범죄예방, 시설안전 등 공익을 목적으로 처리합니다.
+                                  <ul>
+                                    <li>가. 설치근거 : 개인정보보호법 제25조(영상정보처리기기의 설치·운영제한) 및 동법 시행령 제23조(민감정보의 처리제한)</li>
+                                    <li>나. 설치목적 : 범죄예방, 시설물 안전관리 등</li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>② CCTV영상정보 수집 및 보유
+                              <ul>
+                                <li>공단은 CCTV 설치목적에 부합되는 필요 최소한의 범위 안에서만 영상정보를 수집하며, CCTV에 의하여 수집된 영상정보는 수집 시 명시한 보유기간 만료시 즉시 삭제하고 있습니다. 단, 다른 법률이나 근거에 따라 보존하여야 하는 경우에는 그러하지 아니합니다.</li>
+                              </ul>
+                            </li>
+                            <li>③ 영상정보의 열람 및 삭제 청구
+                              <ul>
+                                <li>공단이 보유하고 있는 CCTV영상정보는 CCTV설치목적 외의 용도로 활용되거나 접근권한을 부여받은 자 이외의 타인에게 열람·제공하지 않도록 행정정보와는 달리 이용 및 제공에 엄격히 제한하고 있습니다.</li>
+                                <li><strong>* 영상정보의 열람 및 삭제 청구 조치는 공단 개인정보처리방침을 준용합니다.</strong></li>
+                                <li>▶ 영상정보 열람청구 접수·처리 및 삭제·파기 부서
+                                  <table class="tbl_g">
+                                    <caption>영상정보 열람청구 접수·처리 및 삭제·파기 부서</caption>
+                                    <thead>
+                                      <tr>
+                                        <th scope="col" height="35">연번</th>
+                                        <th scope="col">부서명</th>
+                                        <th scope="col">담당자</th>
+                                        <th scope="col">연락처</th>
+                                      </tr>
+
+                                    </thead>
+                                      <tbody>
+                                      <tr>
+                                        <td>1</td>
+                                        <td>공영주차장</td>
+                                        <td>김동호</td>
+                                        <td>070-4496-1824(fax.031-6321-7152)</td>
+                                      </tr>
+                                      <tr>
+                                        <td>2</td>
+                                        <td>이천 추모의 집</td>
+                                        <td>신서윤</td>
+                                        <td>070-4915-7254(fax.031-638-4145)</td>
+                                      </tr>
+                                      <tr>
+                                        <td>3</td>
+                                        <td>농업테마공원</td>
+                                        <td>김재섭</td>
+                                        <td>070-4941-1088(031-632-6431)</td>
+                                      </tr>
+                                      <tr>
+                                        <td>4</td>
+                                        <td>이동지원센터</td>
+                                        <td>이세진</td>
+                                        <td>070-4915-7251(031-631-0461)</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </li>
+                                <li>다만, 다음 각 호의 어느 하나에 해당하는 경우에는 당해 영상파일의 보유목적 외의 목적으로 이용하게 하거나 제공할 수 있다.(다음 각 호의 어느 하나에 해당하는 경우에도 정보주체 또는 제 3자의 권리와 이익을 부당하게 침해할 우려가 있다고 인정되는 때에는 불가)</li>
+                                <li>
+                                  <ul>
+                                    <li>가. 정보주체의 동의가 있거나 정보주체에게 제공하는 경우</li>
+                                    <li>나. 정보처리를 보유목적 외의 목적으로 이용하게 하거나 제공하지 아니하면 다른 법률에서 정하는 소관 업무를 수행할 수 없는 경우로서 법 제7조에 따른 개인 정보보호위원회 심의를 거친 경우</li>
+                                    <li>다. 조약 및 기타 국제협정의 이행을 위하여 외국정부 도는 국제기구에 제공하는 경우</li>
+                                    <li>라. 통계작성 및 학술연구 등의 목적을 위한 경우로서 특정개인을 식별할 수 없는 형태로 제공하는 경우</li>
+                                    <li>마. 정보주체 또는 그 법정대리인이 의사표시를 할 수 없는 상태에 있거나 주소불명 등으로 동의를 할 수 없는 경우로서 정보주체외의 자에게 이용하게 하거나 제공하는 것이 명백히 정보주체에게 이익이 된다고 인정되는 경우</li>
+                                    <li>바. 범죄의 수사와 공소의 제기 및 유지에 필요한 경우</li>
+                                    <li>사. 법원의 재판업무수행을 위하여 필요한 경우</li>
+                                    <li>※ 영상정보 확인방법 : 영상정보 관리책임자에게 사전 신청 후 공단을 방문하시면 확인 가능합니다.</li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>④ CCTV영상정보의 이용 및 제공의 제한
+                              <ul>
+                                <li>공단이 보유하고 있는 CCTV 영상정보는 개인정보보호법(다른 법률에 규정이 있는 경우는 해당 법률)의 규정이 정하는 바에 따라, 정보주체는 영상정보의 존재확인 및 열람·삭제를 요청할 수 있습니다.<br>다만, 다음 각 호의 1에 해당하는 경우에는 청구사항에 대하여 거부할 수 있으며, 이 경우 10일이내에 정보주체에게 통지하여 드립니다.
+                                  <ul>
+                                    <li>가. 범죄수사, 공소유지, 재판수행에 중대한 지장을 초래하는 경우</li>
+                                    <li>나. 특정 정보주체의 영상정보만을 삭제하는 것이 기술적으로 현저히 곤란한 경우</li>
+                                    <li>다. 타인의 사생활권이 침해될 우려가 큰 경우</li>
+                                    <li>라. 기타 열람 등의 요청을 거절할 만한 정당한 공익적 사유가 존재하는 경우</li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>⑤ CCTV 위탁관리
+                              <ul>
+                                <li>다른기관에 위탁한 사실이 없습니다.</li>
+                              </ul>
+                            </li>
+                            <li>⑥ CCTV안내판 설치
+                              <ul>
+                                <li>공단은 CCTV설치된 장소에 다음과 같은 안내판을 설치하여 고객 여러분들이 영상정보 수집에 대하여 인식할 수 있도록 하고 있습니다.
+                                  <ul>
+                                    <li>▶ 안내판 기재내용 : 설치목적, 촬영범위 및 시간, 담당부서, 책임자, 연락처</li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+
+                      <h4>13. 개인정보처리방침의 변경 이력</h4>
+                      <h5>① 이 개인정보처리방침은 2019.6.25.부터 적용됩니다.</h5>
+                      <h5>② 이전의 개인정보처리방침은 아래에서 확인하실 수 있습니다.</h5>
+                      <ul>
+                        <li>
+                          <label for="movePolicy" class="blind">이전처리방침보기</label>
+                          <select id="movePolicy" name="select" size="1" class="f_style6" style="background-color:#eeeeee;" onchange="window.open(value,'_self');">
+                            <option selected="selected">이전처리방침보기</option>
+                            <option value="../etc/etc.php?sp=privacy130827">2013.8.27 ~ 2014.6.18.적용</option>
+                            <option value="../etc/etc.php?sp=privacy150622">2014.6.19.~ 2015.6.22.적용</option>
+                            <option value="../etc/etc.php?sp=privacy160513">2015.6.23.~ 2016.5.13.적용</option>
+                            <option value="../etc/etc.php?sp=privacy161218">2016.5.14.~ 2016.12.18.적용</option>
+                            <option value="../etc/etc.php?sp=privacy161219">2016.12.19.~ 2017.6.15.적용</option>
+                            <option value="../etc/etc.php?sp=privacy170616">2017.6.16.~ 2018.6.18.적용</option>
+                            <option value="../etc/etc.php?sp=privacy190625">2018.6.19.~ 2019.6.24.적용</option>
+                            <option value="../etc/etc.php?sp=privacy">2019.6.25.~ 현재</option>
+                          </select></li>
+                      </ul>
+
+
+                    </div>
+                    <div class="foot_agree">
+                      <div class="area_check">
+                        <input type="checkbox" id="check2" name="check2" onClick="chk2();"  class="i_check" title="개인정보처리방침 동의"  tabindex="2">
+                        <label for="check2">개인정보처리방침에 동의합니다. <em>(필수)</em></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- //개인정보처리방침 -->
+
+                <!-- 서약서 -->
+                <div class="wrap_agree">
+                  <h3 class="tit_square">서약서</h3>
+                  <div class="box_">
+                    <div class="cont_agree">
+                      본인은 이천시 교통약자의 이동편의증진에 관한 조례 17조에 따라 특별교통수단 이용 시 본인의 개인정보 활용에 동의하며 이용자 준수사항을 성실히 이행하겠으며,
+미준수로 인한 불이익을 감수할 것을 서약합니다.
+                    </div>
+
+                    <div class="foot_agree">
+                      <div class="area_check">
+                        <input type="checkbox" id="check3" name="check3" onClick="chk3();"  class="i_check" title="서약서 동의"  tabindex="3">
+                        <label for="check3">서약서에 동의합니다.</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- //서약서 -->
+
+                <!-- 민감정보 수집 및 이용에 대한 안내 -->
+                <div class="wrap_agree">
+                  <h3 class="tit_square">민감정보 수집 및 이용에 대한 안내</h3>
+                  <div class="box_">
+                    <div class="cont_agree">
+                      수집항목 : 장애종류, 발생일
+수집목적 : 이용대상자 심사
+보유기간 : 5년
+ * 위의 민감정보 처리에 대한 동의를 거부할 권리가 있습니다. 그러나 동의를 거부할 경우 이천시 교통약자 이동지원센터 이용에 제한을 받을 수 있습니다.
+                    </div>
+
+                    <div class="foot_agree">
+                      <div class="area_check">
+                        <input type="checkbox" id="check4" name="check4" onClick="chk4();"  class="i_check" title="민감정보 수집 및 이용에 대한 안내 동의"  tabindex="4">
+                        <label for="check4">민감정보 수집 및 이용에 대한 안내에 동의합니다.</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- //민감정보 수집 및 이용에 대한 안내 -->
+
+                <div class="wrap_agree all_agree">
+                  <div class="area_check">
+                    <input type="checkbox" id="checkAll" name="checkAll" class="i_check"  onclick="allChk(this);" title="위 내용을 모두 읽었으며 이에 모두 동의합니다."  tabindex="5">
+                    <label for="checkAll">위 내용을 모두 읽었으며 이에 모두 동의합니다.</label>
+                  </div>
+                </div>
+
+                <div class="area_btn">
+                  <a href="#" id="agree" class="btn_g btn_blue w220">동의합니다</a>
+                  <a href="javascript:history.back();" id="notagree" class="btn_g btn_gray w220">동의하지않습니다</a>
+                </div>
+
+                <!-- //회원가입 -->
+              </div>
+
+            </div>
+          </div>
+        </article>
+      </div>
+    </main>
+    <!-- <div class="footer_wrap" include-html="./layout/footer.html"></div> -->
+	<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+
+
+
+
+
+<hr>
+<!-- 관련사이트 -->
+<div id="f-baner" class="sec_g f_banner">
+  <div class="container_w">
+    <h3 class="tit_square">관련사이트</h3>
+    <div class="fban_ctrl">
+      <a href="#n" class="prev"><span class="blind">이전</span></a>
+      <a href="#n" class="stop"><span class="blind">정지</span></a>
+      <a href="#n" class="play"><span class="blind">재생</span></a>
+      <a href="#n" class="next"><span class="blind">다음</span></a>
+    </div>
+    <div class="slick_g fban_slide">
+      <div><a href="http://www.icheon.go.kr/" target="_blank" title="새창에서 열림"><img src="../images/comm/img-site1.gif" alt="행복도시 이천"></a></div>
+      <div><a href="http://www.2000fmc.or.kr/" target="_blank" title="새창에서 열림"><img src="../images/comm/img-site2.gif" alt="이천시 시설관리공단"></a></div>
+      <div><a href="http://2000farmpark.or.kr/" target="_blank" title="새창에서 열림"><img src="../images/comm/img-site3.gif" alt="이천농업테마공원"></a></div>
+      <div><a href="http://www.cleaneye.go.kr/" target="_blank" title="새창에서 열림"><img src="../images/comm/img-site4.gif" alt="클린아이"></a></div>
+      <div><a href="http://www.acrc.go.kr/" target="_blank" title="새창에서 열림"><img src="../images/comm/img-site5.gif" alt="국민권익위원회"></a></div>
+      <div><a href="https://www.mois.go.kr/" target="_blank" title="새창에서 열림"><img src="../images/comm/img-site6.gif" alt="안전행정부"></a></div>
+      <div><a href="http://www.icheon.go.kr/" target="_blank" title="새창에서 열림"><img src="../images/comm/img-site1.gif" alt="행복도시 이천"></a></div>
+      <div><a href="http://www.2000fmc.or.kr/" target="_blank" title="새창에서 열림"><img src="../images/comm/img-site2.gif" alt="이천시 시설관리공단"></a></div>
+      <div><a href="http://2000farmpark.or.kr/" target="_blank" title="새창에서 열림"><img src="../images/comm/img-site3.gif" alt="이천농업테마공원"></a></div>
+      <div><a href="http://www.cleaneye.go.kr/" target="_blank" title="새창에서 열림"><img src="../images/comm/img-site4.gif" alt="클린아이"></a></div>
+      <div><a href="http://www.acrc.go.kr/" target="_blank" title="새창에서 열림"><img src="../images/comm/img-site5.gif" alt="국민권익위원회"></a></div>
+      <div><a href="https://www.mois.go.kr/" target="_blank" title="새창에서 열림"><img src="../images/comm/img-site6.gif" alt="안전행정부"></a></div>
+    </div>
+  </div>
+</div>
+<!-- //관련사이트 -->
+
+<!-- footer -->
+<footer>
+  <div class="foot_menu">
+    <div class="container_w">
+      <ul>
+        <li><a href="/s6/s602.do?mnr=s602">이용약관</a></li>
+        <li><a href="/s6/s603.do?mnr=s603" class="blue">개인정보처리방침</a></li>
+        <li><a href="/s6/s604.do?mnr=s604">저작권보호 및 정책</a></li>
+        <li><a href="/s6/s605.do?mnr=s605">이메일무단수집거부</a></li>
+        <li><a href="/s1/s104.do?mnr=s104">찾아오시는길</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot_address">
+    <div class="container_w">
+      <div class="foot_logo">
+        <a href="#">이천시동행누리센터</a>
+      </div>
+      <address>
+        (우편번호. 17380) 경기도 이천시 경충대로 2603 (이천시 중리동 111-1) <span>|</span> 대표전화 : 1899-0017 <br>
+본 사이트에서 이메일 주소의 무단수집을 거부하며, 이를 위반시 정보통신망 법에 의해 형사처벌 될 수 있습니다. <br>
+Copyright ⓒ 2014 ICHEON CITY. All Rights Reserved.
+      </address>
+      <ul class="foot_mark">
+        <li><a href="#">웹접근성</a></li>
+        <li><a href="#">가족친화</a></li>
+        <li><a href="#">일생활균형</a></li>
+        <li><a href="#">착한일터</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+    <!-- //footer -->
+  </div>
+
+</body>
+</html>

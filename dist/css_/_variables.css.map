@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "_variables.css",
+	"sources": [
+		"../scss/_variables.scss"
+	],
+	"names": [],
+	"mappings": ""
+}
