@@ -2,7 +2,7 @@
 웹표준, 웹접근성
 
 ## main
-http://odada.me/2000n/
+http://oddodd.io/2000n/
 
 ## list
-http://odada.me/2000n/!list.html
+http://oddodd.io/2000n/!list.html
